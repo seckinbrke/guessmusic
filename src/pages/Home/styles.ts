@@ -1,74 +1,25 @@
 import {StyleSheet} from 'react-native';
-import {theme} from '../../constants/theme';
-import {HEIGHT, WIDTH} from '../../constants/common';
+
 
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.colors.main.secondary,
-    alignItems: 'center',
-    paddingTop: theme.spacing(2),
+    backgroundColor: '#1a1a1a', // Dark background similar to the web version
   },
-  headerText: {
-    fontSize: 16,
-    fontFamily: theme.fonts.regular,
-    color: theme.colors.main.white,
+  backgroundVideo: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+    opacity: 0.5,
   },
-  content: {
+  grid: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 120,
+    marginTop: 20,
   },
-  icon: {
-    width: 70,
-    height: 70,
-    marginBottom: 24,
-  },
-  title: {
-    fontSize: 20,
-    fontFamily: theme.fonts.regular,
-    color: theme.colors.main.darkGray,
-    lineHeight: 28,
-  },
-  subtitle: {
-    fontSize: 20,
-    fontFamily: theme.fonts.regular,
-    color: theme.colors.main.darkGray,
-    lineHeight: 28,
-  },
-  bgImage: {
-    resizeMode: 'stretch',
-  },
-  background: {
-    height: HEIGHT * 0.66,
-    width: WIDTH - 64,
-    paddingTop: theme.spacing(3),
-    paddingHorizontal: theme.spacing(3),
-  },
-  invoicesContainer: {
-    height: HEIGHT * 0.6,
-    paddingTop: 10,
-  },
-  invoiceItem: {
-    backgroundColor: theme.colors.main.cardBg,
-    height: 64,
-    borderRadius: 35,
-    padding: theme.spacing(2),
-    marginBottom: theme.spacing(2),
-  },
-  invoiceTitle: {
-    color: theme.colors.main.white,
-    fontSize: 15,
-    fontFamily: theme.fonts.regular,
-  },
-  invoiceDate: {
-    color: theme.colors.main.white,
-    fontSize: 12,
-    fontFamily: theme.fonts.light,
-    opacity: 0.8,
-  },
-  flatListContent: {
-    paddingBottom: 10,
+  carousel: {
+    marginTop: 20,
+    flex: 1,
   },
 });

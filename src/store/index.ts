@@ -1,15 +1,14 @@
 import {configureStore} from '@reduxjs/toolkit';
 import helperSlice from './slices/helperSlice';
-import {api} from '../services/api';
 
 export const createStore = () =>
   configureStore({
     reducer: {
-      [api.reducerPath]: api.reducer,
+      // [api.reducerPath]: api.reducer,
       helper: helperSlice,
     },
     middleware: getDefaultMiddleware =>
-      getDefaultMiddleware().concat(api.middleware), // Add the RTK Query middleware here
+      getDefaultMiddleware(),
   });
 
 const store = createStore();

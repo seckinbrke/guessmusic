@@ -3,8 +3,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import {ROUTE_NAMES} from '../../constants/common';
-import Home from '../../pages/Home/Home';
 import {HomeStackOptions} from './options';
+import HomeScreen from '../../pages/Home/Home';
 
 const Stack = createStackNavigator();
 
@@ -14,8 +14,8 @@ const StackWrapper = () => {
       <Stack.Navigator initialRouteName={ROUTE_NAMES.HOME}>
         <Stack.Screen
           options={HomeStackOptions}
-          name="HomePage"
-          component={Home}
+          name="HomeScreen"
+          component={HomeScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>
