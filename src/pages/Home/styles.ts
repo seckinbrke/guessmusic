@@ -1,10 +1,10 @@
 import {StyleSheet} from 'react-native';
 
-
 export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#1a1a1a', // Dark background similar to the web version
+    padding: 16,
   },
   backgroundVideo: {
     position: 'absolute',
@@ -15,11 +15,27 @@ export default StyleSheet.create({
     opacity: 0.5,
   },
   grid: {
-    flex: 1,
-    marginTop: 20,
+    flex: 0.3,
   },
   carousel: {
-    marginTop: 20,
     flex: 1,
+  },
+  carouselTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#fff',
+    alignSelf: 'center',
+  },
+  gridTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#fff',
+    margin: 8,
+  },
+  carouselContainer: {
+    flex: 0.4,
+  },
+  gridContainer: {
+    flex: 0.6,
   },
 });

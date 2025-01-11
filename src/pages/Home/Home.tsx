@@ -1,5 +1,5 @@
 import React from 'react';
-import {FlatList, Dimensions} from 'react-native';
+import {FlatList, Dimensions, Text, View} from 'react-native';
 import Carousel from 'react-native-reanimated-carousel';
 import {CategoryCard} from '../../components/CategoryCard/CategoryCard';
 import Video from 'react-native-video';
@@ -71,28 +71,35 @@ const HomeScreen = () => {
         resizeMode="cover"
       />
 
-      <Carousel
-        loop
-        width={width}
-        height={width * 0.6}
-        data={categories.slice(0, 3)}
-        renderItem={renderCarouselItem}
-        mode="parallax"
-        modeConfig={{
-          parallaxScrollingScale: 0.9,
-          parallaxScrollingOffset: 50,
-        }}
-        autoPlay={true}
-        style={styles.carousel}
-      />
+      <View style={styles.carouselContainer}>
+        <Text style={styles.carouselTitle}>Popular Categories</Text>
+        <Carousel
+          loop
+          width={width}
+          height={width * 0.6}
+          data={categories.slice(0, 3)}
+          renderItem={renderCarouselItem}
+          mode="parallax"
+          modeConfig={{
+            parallaxScrollingScale: 0.9,
+            parallaxScrollingOffset: 50,
+          }}
+          autoPlay={true}
+          scrollAnimationDuration={3000}
+          style={styles.carousel}
+        />
+      </View>
 
-      <FlatList
-        data={categories}
-        renderItem={renderGridItem}
-        keyExtractor={item => item.id}
-        numColumns={2}
-        style={styles.grid}
-      />
+      <View style={styles.gridContainer}>
+        <Text style={styles.gridTitle}>Categories</Text>
+        <FlatList
+          data={categories}
+          renderItem={renderGridItem}
+          keyExtractor={item => item.id}
+          numColumns={2}
+          style={styles.grid}
+        />
+      </View>
     </SafeAreaView>
   );
 };

@@ -1,8 +1,8 @@
 import {StyleSheet, Dimensions} from 'react-native';
 
 const {width} = Dimensions.get('window');
-const gridItemWidth = (width - 24) / 2;
-const imageHeight = 150;
+const gridItemWidth = (width - 64) / 2;
+const imageHeight = 120;
 
 export default StyleSheet.create({
   container: {
@@ -11,12 +11,12 @@ export default StyleSheet.create({
   },
   carouselCard: {
     width: width * 0.8,
-    height: width * 0.65,
+    height: width * 0.55,
     alignSelf: 'center',
   },
   gridCard: {
     width: gridItemWidth,
-    height: 250,
+    height: 220,
     margin: 8,
   },
   image: {
